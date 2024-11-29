@@ -21,6 +21,10 @@
         justify-content: center;
         -webkit-font-smoothing: antialiased;
 
+        .economy {
+            height:40vh;
+            width: auto;
+        }
         .WelcomeScreen__content {
             display: flex;
             flex-direction: column;

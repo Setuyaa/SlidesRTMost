@@ -11,6 +11,13 @@
     .WelcomeScreenSlide__image {
         align-self: center;
     }
+    @media (max-height: 1300px) {
+        img {
+            height:50vh;
+            width:auto;
+        }
+        
+    }
 
     .WelcomeScreenSlide__title pre{
         color: var( --title-color-welcome);
