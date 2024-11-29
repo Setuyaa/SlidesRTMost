@@ -1,0 +1,55 @@
+@import url("./mods/_css_variables.scss");
+@import url("./mods/fonts.css");
+
+
+.WelcomeScreenSlide {
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+    justify-content: flex-end;
+
+    .WelcomeScreenSlide__image {
+        align-self: center;
+    }
+
+    .WelcomeScreenSlide__title pre{
+        color: var( --title-color-welcome);
+        font-family: 'ProximaNovaBold', sans-serif;
+        font-size: 3em;
+        font-weight: 600;
+        letter-spacing: -1.6px;
+        line-height: 50px;
+        text-align: center;
+        margin: 16px 0;
+    }
+
+    .WelcomeScreenSlide__subtitle pre{
+        color:black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        font-weight: normal;
+        line-height: 24px;
+        text-align: center;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    // &.WelcomeScreenSlide--main {
+
+    //    // max-width: 582px;
+    //     .WelcomeScreenSlide__title {
+    //         font-size: 80px;
+    //         line-height: normal;
+    //     }
+    // }
+
+    &.WelcomeScreenSlide--darkMode {
+        .WelcomeScreenSlide__title {
+            color: var(--button-color);
+        }
+
+        .WelcomeScreenSlide__subtitle {
+            color: rgba(var(--button-color-rgb), 0.72);
+        }
+    }
+}
