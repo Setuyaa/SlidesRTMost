@@ -6,13 +6,14 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useIntl, FormattedMessage } from 'react-intl';
 
 import { MODAL_TRANSITION_TIMEOUT } from '../constrains/constrains';
-import robo1  from '../svg/robo1.svg';
+import robo1 from '../svg/robo1.svg';
 import time2 from '../svg/time2.svg';
 import collaborate3 from '../svg/collaborate3.svg';
 import integrate4 from '../svg/integrate4.svg';
 import safety5 from '../svg/safety5.svg';
 import Carousel from '../Carousel';
 import Header from '../Header';
+import Footer from '../footer/footer';
 // import LoadingBackground from './LoadingScreen/LoadingBackground';
 
 import WelcomeScreenSlide from './WelcomeScreenSlide';
@@ -20,6 +21,9 @@ import WelcomeScreenSlide from './WelcomeScreenSlide';
 import '../css/Button.scss';
 import '../css/WelcomeScreen.scss';
 import '../css/LoadingScreen.css';
+import Button from '../Button';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 
 type WelcomeScreenProps = {
     onGetStarted?: () => void;
@@ -40,7 +44,7 @@ function WelcomeScreen({
         {
             key: 'welcome',
             title: 'Начните совместную {br}работу в РТ Мост!',
-            subtitle: 'РТ Мост – это корпоративная отечественная платформа {br}для совместной работы над проектами. Безопасная, гибкая {br}и интегрируемая с любыми инструментами.', 
+            subtitle: 'РТ Мост – это корпоративная отечественная платформа {br}для совместной работы над проектами. Безопасная, гибкая {br}и интегрируемая с любыми инструментами.',
             image: (
                 <img
                     src={robo1}
@@ -51,8 +55,8 @@ function WelcomeScreen({
         },
         {
             key: 'economy',
-            title: 'Экономьте время {br} и автоматизируйте свой бизнес.', 
-            subtitle: 'РТ Мост позволяет централизованно управлять проектами и отслеживать {br}своевременное выполнение всех задач. Автоматизируйте рутинные процессы {br}с помощью предустановленных сценариев и посвятите свое время тому, {br}что действительно важно!', 
+            title: 'Экономьте время {br} и автоматизируйте свой бизнес.',
+            subtitle: 'РТ Мост позволяет централизованно управлять проектами и отслеживать {br}своевременное выполнение всех задач. Автоматизируйте рутинные процессы {br}с помощью предустановленных сценариев и посвятите свое время тому, {br}что действительно важно!',
             image: (
                 <img className='economy'
                     src={time2}
@@ -92,6 +96,14 @@ function WelcomeScreen({
                     draggable={false}
                 />
             ),
+            button: (
+                <Router>
+                    <Button
+                        extraClasses='primary-button'
+                        defaultMessage='Перейти к работе'
+                    />
+                </Router>
+            ),
         },
     ];
 
@@ -106,7 +118,7 @@ function WelcomeScreen({
     return (
         <div
             className={classNames(
-               'LoadingScreen',
+                'LoadingScreen',
                 'WelcomeScreen',
             )}
         >
@@ -115,7 +127,7 @@ function WelcomeScreen({
                 <div className={classNames('WelcomeScreen__body', transition)}>
                     <div className='WelcomeScreen__content'>
                         <Carousel
-                            slides={slides.map(({ key, title, subtitle, image, main }) => ({
+                            slides={slides.map(({ key, title, subtitle, image, main, button }) => ({
                                 key,
                                 content: (
                                     <WelcomeScreenSlide
@@ -124,24 +136,16 @@ function WelcomeScreen({
                                         subtitle={subtitle}
                                         image={image}
                                         isMain={main}
+                                        button={button}
                                     />
                                 ),
                             }))}
                         />
-                        {/* <button
-                            id='getStartedWelcomeScreen'
-                            className={classNames(
-                                'WelcomeScreen__button',
-                                'primary-button primary-medium-button',
-                            )}
-                            onClick={handleOnGetStartedClick}
-                        >
-                            {//formatMessage({ id: 'renderer.components.welcomeScreen.button.getStarted', defaultMessage: 'Get Started' })
-                            }
-                        </button> */}
+
                     </div>
                 </div>
             )}
+            <Footer />
             {/* <div className='WelcomeScreen__footer' /> */}
         </div>
     );

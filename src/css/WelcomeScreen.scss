@@ -22,13 +22,14 @@
         -webkit-font-smoothing: antialiased;
 
         .economy {
-            height:40vh;
+            height:35vh;
             width: auto;
         }
         .WelcomeScreen__content {
             display: flex;
             flex-direction: column;
             width: 100%;
+            bottom: 0;
             align-items: center;
             justify-content: center;
 

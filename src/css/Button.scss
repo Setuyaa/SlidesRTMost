@@ -2,6 +2,9 @@
 @import url("./mods/fonts.css");
 .primary-button {
     cursor: pointer;
+    height: 5vh;
+    width: 12vw;
+    margin: 10px;
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -32,11 +35,10 @@
         color: rgba(var(--center-channel-color-rgb), 0.32);
         cursor: not-allowed;
     }
-
-    i {
-        display: flex;
-        font-size: 18px;
-    }
+    // i {
+    //     display: flex;
+    //     font-size: 18px;
+    // }
 }
 
 .primary-button-inverted {

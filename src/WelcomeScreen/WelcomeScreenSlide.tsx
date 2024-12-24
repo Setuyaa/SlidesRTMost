@@ -5,13 +5,14 @@ import classNames from 'classnames';
 import React from 'react';
 
 import '../css/WelcomeScreenSlide.scss';
+import '../Button/index';
 
 type WelcomeScreenSlideProps = {
     title: string| React.ReactElement;
     subtitle: string | React.ReactElement;
     image: React.ReactNode;
     isMain?: boolean;
-    darkMode?: boolean;
+    button?: React.ReactElement;
 };
 const formatText = (text: string): string => {
     return text.replace(/{br}/g, '\n');
@@ -21,14 +22,13 @@ const WelcomeScreenSlide = ({
     subtitle,
     image,
     isMain,
-    darkMode,
+    button,
 }: WelcomeScreenSlideProps) => (
     <div
         className={classNames(
             'WelcomeScreenSlide',
             {
                 'WelcomeScreenSlide--main': isMain,
-                'WelcomeScreenSlide--darkMode': darkMode,
             },
         )}
     >
@@ -40,6 +40,9 @@ const WelcomeScreenSlide = ({
         </div>
         <div className='WelcomeScreenSlide__subtitle'>
             {typeof subtitle === 'string' ? <pre>{formatText(subtitle)} </pre> : subtitle}
+        </div>
+        <div className='WelcomeScreenSlide__button'>
+            {button}
         </div>
     </div>
 );
