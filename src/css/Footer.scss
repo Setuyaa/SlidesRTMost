@@ -1,10 +1,10 @@
 footer {
+    flex: 0 1 10vh;
     display: flex;
     justify-content: space-between;
     width: 80%;
     max-width: 1520px;
     height: auto;
-    min-height: 80px;
     flex-flow: wrap;
     align-items: center;
     align-self: center;
