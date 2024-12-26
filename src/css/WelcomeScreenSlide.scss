@@ -30,7 +30,7 @@
     }
 
     .WelcomeScreenSlide__button {
-        align-self: center;
+        text-align: center;
     }
 
     .WelcomeScreenSlide__title {
@@ -60,10 +60,12 @@
         .WelcomeScreenSlide__title {
             font-size: 2em;
             line-height: 30px;
+            padding: 0 5vw;
         }
         .WelcomeScreenSlide__subtitle {
             line-height: 1.2em;
             font-size: 1em;
+            padding: 0 5vw;
         }
         // .WelcomeScreenSlide__subtitle {
         //     // line-height: 18px;
@@ -97,13 +99,14 @@
     }
 
 
-    @media (min-width: 1000px) {
+    @media (min-width: 600px) {
         .WelcomeScreenSlide__ti {
-            width: 40vw;
+            width: 45vw;
         }
         .WelcomeScreenSlide__subtitle {
             font-size: 1.2em;
-            line-height: 24px;
+            line-height: 1.5em;
+            padding: 0 10vw;
         }
     }
 

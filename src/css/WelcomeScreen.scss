@@ -32,20 +32,31 @@
         @media (max-width: 1000px) {
             .collaborate {
                 height: auto;
-                max-width:70vw;
+                max-width:60vw;
                 padding-bottom: 7vh;
             }
         }
-        @media (max-width: 400px) {
+        @media (max-width: 900px) {
             .integrate {
                 max-width: 100%;
                 padding-bottom: 0vh;
             }
             .collaborate {
-                max-width: 100%;
+                max-width: 80%;
                 padding-bottom: 7vh;
             }
         }
+        @media (max-width: 900px) {
+            .integrate {
+                max-width: 100%;
+                padding-bottom: 0vh;
+            }
+            .collaborate {
+                max-width: 80%;
+                padding-bottom: 7vh;
+            }
+        }
+
         .WelcomeScreen__content {
             display: flex;
             flex-direction: column;
