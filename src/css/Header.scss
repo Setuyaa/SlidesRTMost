@@ -33,14 +33,11 @@
             }
         }
     }
+}
+@media screen and (max-width: 699px) {
+    .Header {
+        flex: 0 1 10vh;
+        padding: 24px;
 
-    // &.Header--darkMode {
-    //     .Header__main {
-    //         .Header__logo {
-    //             path {
-    //                 fill: var(--button-color);
-    //             }
-    //         }
-    //     }
-    // }
+    }
 }

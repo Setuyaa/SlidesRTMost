@@ -30,6 +30,8 @@ footer {
 
 @media screen and (max-width: 699px) {
     footer {
+        flex: 0 1 5vh;
         padding: 0 24px;
+
     }
 }
