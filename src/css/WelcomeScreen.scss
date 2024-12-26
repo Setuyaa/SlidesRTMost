@@ -14,7 +14,7 @@
         flex: 1 1 auto; /* Занимает оставшиеся 80%,  минимум 80% */
         display: flex;
         width: 100%;
-        padding-bottom: 9vh;
+        margin-bottom: 12vh;
         align-items:end;
         justify-content: center;
         -webkit-font-smoothing: antialiased;
@@ -23,21 +23,6 @@
             height:30vh;
             width: auto;
         }
-        @media (max-width: 1000px) {
-            .collaborate {
-                height: auto;
-                max-width:70vw;
-                padding-bottom: 7vh;
-            }
-        }
-        @media (max-width: 400px) {
-            .collaborate {
-                height: auto;
-                max-width:70vw;
-                // padding-bottom: 7vh;
-            }
-        }
-
         .WelcomeScreen__content {
             display: flex;
             flex-direction: column;
