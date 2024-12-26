@@ -3,7 +3,7 @@
 .WelcomeScreen {
     display: flex;
     flex-direction: column; 
-    height: 100vh;
+    height: 100%;
     z-index: 20;
     
     * {
@@ -17,11 +17,13 @@
     }
 
     .WelcomeScreen__body {
-        flex: 1 1 auto;
+        flex: 1 0 80%;
         display: flex;
         width: 100%;
+        flex: 1;
         padding-bottom: 9vh; //
-        align-items:end;
+        // align-items:end;
+        align-items: center;
         justify-content: center;
         -webkit-font-smoothing: antialiased;
 
