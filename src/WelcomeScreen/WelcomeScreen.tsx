@@ -46,6 +46,7 @@ function WelcomeScreen({
             title: 'Начните совместную работу в',
             title2: 'РТ Мост!',
             subtitle: 'РТ Мост – это корпоративная отечественная платформа для совместной работы над проектами. Безопасная, гибкая и интегрируемая с любыми инструментами.',
+            subtitle2: 'РТ Мост – это корпоративная отечественная платформа для совместной работы над проектами. Безопасная, гибкая и интегрируемая с любыми инструментами.',
             image: (
                 <img
                     src={robo1}
@@ -58,6 +59,7 @@ function WelcomeScreen({
             key: 'economy',
             title: 'Экономьте время  и автоматизируйте свой бизнес.',
             subtitle: 'РТ Мост позволяет централизованно управлять проектами и отслеживать своевременное выполнение всех задач. Автоматизируйте рутинные процессы с помощью предустановленных сценариев и посвятите свое время тому, что действительно важно!',
+            subtitle2: 'РТ Мост позволяет централизованно управлять проектами и отслеживать своевременное выполнение всех задач.',
             image: (
                 <img
                     src={time2}
@@ -69,6 +71,7 @@ function WelcomeScreen({
             key: 'collaborate',
             title: 'Сотрудничайте в режиме реального времени',
             subtitle: 'Обменивайтесь файлами и фрагментами кода, создавайте тематические каналы для разных отделов и задач, совершайте личные и групповые видеозвонки. И все это – не выходя из приложения.',
+            subtitle2: 'Обменивайтесь файлами и фрагментами кода, создавайте тематические каналы для разных отделов и задач, совершайте личные и групповые видеозвонки.',
             image: (
                 <img className='collaborate'
                     src={collaborate3}
@@ -80,6 +83,7 @@ function WelcomeScreen({
             key: 'integrate',
             title: 'Подключайте привычные инструменты',
             subtitle: 'РТ Мост поддерживает интеграцию со многими популярными сервисами, такими как GitHub, GitLab, Jira, ServiceNow.',
+            subtitle2: 'РТ Мост поддерживает интеграцию со многими популярными сервисами, такими как GitHub, GitLab, Jira, ServiceNow.',
             image: (
                 <img className='integrate'
                     src={integrate4}
@@ -91,6 +95,7 @@ function WelcomeScreen({
             key: 'safety',
             title: 'Общайтесь безопасно',
             subtitle: 'РТ Мост поддерживает мультифакторную авторизацию для защиты рабочего пространства. Развертывание мессенджера на VPS (виртуальном выделенном сервере) обеспечивает высокую степень конфиденциальности данных.',
+            subtitle2: 'РТ Мост поддерживает мультифакторную авторизацию для защиты рабочего пространства.',
             image: (
                 <img
                     src={safety5}
@@ -128,7 +133,7 @@ function WelcomeScreen({
                 <div className={classNames('WelcomeScreen__body', transition)}>
                     <div className='WelcomeScreen__content'>
                         <Carousel
-                            slides={slides.map(({ key, title, title2, subtitle, image, main, button }) => ({
+                            slides={slides.map(({ key, title, title2, subtitle, subtitle2, image, main, button }) => ({
                                 key,
                                 content: (
                                     <WelcomeScreenSlide
@@ -136,6 +141,7 @@ function WelcomeScreen({
                                         title={title}
                                         title2={title2}
                                         subtitle={subtitle}
+                                        subtitle2={subtitle2}
                                         image={image}
                                         isMain={main}
                                         button={button}

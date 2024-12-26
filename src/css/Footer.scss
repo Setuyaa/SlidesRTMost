@@ -30,6 +30,25 @@ footer {
 
 @media screen and (max-width: 699px) {
     footer {
-        padding: 0 24px;
+        padding: 1rem;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 1000px) {
+    footer {
+        a {
+            font-size: 0.8em;
+            font-weight: 500;
+            line-height: 1em;
+        }
+    }
+}
+@media screen and (min-width: 1500px) {
+    footer {
+        a {
+            font-size: 1.2em;
+            font-weight: 500;
+            line-height: 1.5em;
+        }
     }
 }

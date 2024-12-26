@@ -36,7 +36,7 @@
                 padding-bottom: 7vh;
             }
         }
-        @media (max-width: 900px) {
+        @media (max-width: 600px) {
             .integrate {
                 max-width: 100%;
                 padding-bottom: 0vh;
@@ -46,17 +46,17 @@
                 padding-bottom: 7vh;
             }
         }
-        @media (max-width: 900px) {
+        @media (min-width:601px) and (max-width: 1200px) {
             .integrate {
                 max-width: 100%;
                 padding-bottom: 0vh;
             }
             .collaborate {
-                max-width: 80%;
+                max-width: 100%;
+                height: auto;
                 padding-bottom: 7vh;
             }
         }
-
         .WelcomeScreen__content {
             display: flex;
             flex-direction: column;

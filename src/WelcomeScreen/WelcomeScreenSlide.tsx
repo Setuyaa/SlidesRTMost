@@ -11,17 +11,19 @@ type WelcomeScreenSlideProps = {
     title: string | React.ReactElement;
     title2?: string | React.ReactElement;
     subtitle: string | React.ReactElement;
+    subtitle2?: string | React.ReactElement;
     image: React.ReactNode;
     isMain?: boolean;
     button?: React.ReactElement;
 };
-const formatText = (text: string): string => {
-    return text.replace(/{br}/g, '&nbsp;');
-};
+// const formatText = (text: string): string => {
+//     return text.replace(/{br}/g, '&nbsp;');
+// };
 const WelcomeScreenSlide = ({
     title,
     title2,
     subtitle,
+    subtitle2,
     image,
     isMain,
     button,
@@ -45,8 +47,13 @@ const WelcomeScreenSlide = ({
                 {title2}
             </div>
         </div>
-        <div className='WelcomeScreenSlide__subtitle'>
-            {subtitle}
+        <div className='WelcomeScreenSlide__s'>
+            <div className='WelcomeScreenSlide__subtitle'>
+                {subtitle}
+            </div>
+            <div className='WelcomeScreenSlide__subtitle2'>
+                {subtitle2}
+            </div>
         </div>
         <div className='WelcomeScreenSlide__button'>
             {button}
