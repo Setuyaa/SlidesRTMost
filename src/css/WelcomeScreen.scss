@@ -3,36 +3,52 @@
 .WelcomeScreen {
     display: flex;
     flex-direction: column; 
-    height: 100vh; /* Или задайте конкретную высоту */
-  
+    height: 100vh;
     z-index: 20;
     
     * {
         z-index: 21;
     }
+    @media (max-width: 1000px) {
+        .WelcomeScreen__body {
+            padding-bottom: 0;
+            align-items:center;
+        }
+    }
 
     .WelcomeScreen__body {
-        flex: 1 0 80%; /* Занимает оставшиеся 80%,  минимум 80% */
+        flex: 1 0 80%;
         display: flex;
-        flex: 1;
         width: 100%;
-        align-items: center;
+        padding-bottom: 9vh; //
+        align-items:end;
         justify-content: center;
         -webkit-font-smoothing: antialiased;
 
-        .economy {
-            height:35vh;
-            width: auto;
-        }
         .collaborate {
             height:30vh;
             width: auto;
         }
+        @media (max-width: 1000px) {
+            .collaborate {
+                height: auto;
+                max-width:70vw;
+                padding-bottom: 7vh;
+            }
+        }
+        @media (max-width: 400px) {
+            .collaborate {
+                height: auto;
+                max-width:70vw;
+                padding-bottom: 0vh;
+            }
+        }
+
         .WelcomeScreen__content {
             display: flex;
             flex-direction: column;
             width: 100%;
-            bottom: 0;
+            // bottom: 0;
             align-items: center;
             justify-content: center;
 
